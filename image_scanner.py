@@ -1,5 +1,5 @@
 import pygame as pg
-import os, time, random
+import random
 pg.init()
 WIN , HEI = 360, 480
 inital_x, inital_y = 0, 0
