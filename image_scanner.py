@@ -6,8 +6,7 @@ inital_x, inital_y = 0, 0
 window = pg.display.set_mode((WIN, HEI), 0, 32)
 class color_dector:
     def __init__(self, x, y, size:tuple):
-        self.x = x
-        self.y = y
+        self.x, self.y = x, y
         self.size = size
 s = color_dector(inital_x, inital_y, (1, 1))
 golf = pg.Surface((s.size))
@@ -20,7 +19,6 @@ while Run:
     pos = (s.x, s.y)
     color = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
     pg.draw.line(window, color, pos, pos, 1)
-    #pg.draw.line(window)
 
     s.x += 1
     window.blit(golf, (s.x, s.y))
