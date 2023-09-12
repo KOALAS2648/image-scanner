@@ -39,6 +39,7 @@ while Run:
     pg.display.flip()
 
 with open("color_list.txt", "w") as cs:
+    file_len_count = 0
     for colorval in color_list:
         counter = 0
         for number in colorval:
@@ -46,5 +47,8 @@ with open("color_list.txt", "w") as cs:
             cs.write(str(number))
             if counter != 3:
                 cs.write(" ")
-        cs.write("\n")
+        file_len_count +=1
+        if len(color_list) != file_len_count:
+            cs.write("\n")
+
 print(len(color_list))
